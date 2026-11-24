@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/miley777/mini-project#readme",
   "dependencies": {
-    "fastify": "^5.0.0",
-    "fastify-plugin": "^5.0.0",
     "@fastify/autoload": "^6.0.0",
     "@fastify/sensible": "^6.0.0",
-    "fastify-cli": "^7.4.1"
-  },
-  "devDependencies": {}
+    "@fastify/static": "^10.1.12",
+    "fastify": "^5.0.0",
+    "fastify-cli": "^7.4.1",
+    "fastify-plugin": "^5.0.0"
+  }
 }

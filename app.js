@@ -2,12 +2,22 @@
 
 const path = require('node:path')
 const AutoLoad = require('@fastify/autoload')
+const fastifyStatic = require('@fastify/static');
 
 // Pass --options via CLI arguments in command to enable these options.
 const options = {}
 
 module.exports = async function (fastify, opts) {
   // Place here your custom code!
+
+  fastify.register(fastifyStatic, {
+    root: `${process.cwd()}/my-app/build`,
+  });
+
+  fastify.setNotFoundHandler((req, res) => {
+    res.sendFile('index.html');
+  });
+
 
   // Do not touch the following lines
 
